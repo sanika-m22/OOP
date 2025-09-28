@@ -1,0 +1,80 @@
+//BY DEFAULT 
+
+#include <iostream>
+using namespace std;
+class student 
+{
+    string name;
+    float percentage;
+    public:
+    student()
+    {
+        percentage=90;
+        name="sanika";
+    }
+    void display()
+{
+    cout<<"name:"<<name<<endl<<"percentage:"<<percentage;
+}
+};
+int main() {
+    student s1;
+    s1.display();
+    
+    return 0;
+}
+
+//BY PARAMERTERISED
+
+#include <iostream>
+using namespace std;
+class student 
+{
+    string name;
+    float percentage;
+    public:
+    student(string n,float per)
+    {
+        name=n;
+        percentage=per;
+    }
+    void display()
+{
+    cout<<"name:"<<name<<endl<<"percentage:"<<percentage;
+}
+};
+int main() {
+    student s1("sanika",90);
+    s1.display();
+    
+    return 0;
+}
+
+//BY COPY
+
+#include <iostream>
+using namespace std;
+class student 
+{
+    string name;
+    float percentage;
+    public:
+    student(string n,float per)
+    {
+        name=n;
+        percentage=per;
+    }
+    student(student &s)
+    {
+        name=s.name;
+        percentage=s.percentage;
+    cout<<"name:"<<name<<endl<<"percentage:"<<percentage;
+}
+};
+int main() {
+    student s1("sanika",90);
+    student s2(s1);
+    
+    return 0;
+}
+
