@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+class college
+{
+    int roll;
+    string name;
+    string course;
+    public:
+    college(int r,string n,string c="computer eng")
+    {
+        roll=r;
+        name=n;
+        course=c;
+    }
+    void display()
+    {
+        cout<<endl<<"roll no:"<<roll<<endl<<"name:"<<name<<endl<<"course:"<<course;
+    }
+};
+int main()
+{
+    college s1(1,"sanika");
+    s1.display();
+    college s2(2,"sahil","btech");
+    s2.display();
+    return 0;
+}
